@@ -1,0 +1,22 @@
+#dateP>#dateIcon {
+    display: flex;
+    align-items: center;
+}
+
+#modalFilm {
+    display: flex;
+}
+
+#mImg {
+    width: 40%;
+    max-width: 300px;
+}
+
+#mHoras>.btn {
+    color: black;
+    margin: 10px;
+}
+
+.horaSelect {
+    background-color: #00bfa5;
+}
