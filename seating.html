@@ -15,6 +15,7 @@
 </head>
 
 <body>
+
   <div class="container">
     <div class="row">
       <nav class="col s12 nav-extended">
@@ -37,6 +38,7 @@
         <div class="nav-wrapper">
           <div class="col s12">
             <a href="./index.html" class="breadcrumb">Película</a>
+            <a href="./asientos.html" class="breadcrumb">Asientos</a>
           </div>
         </div>
       </nav>
@@ -46,22 +48,23 @@
   <div class="container">
     <div class="row">
 
-      <div class="col s12 m3">
-
-        <div id="dateP">
-          <div id="dateIcon">
-            <i class="small material-icons">date_range</i>
-            <p>Fecha:</p>
+      <div class="prelo" class="col s12">
+        <div class="preloader-wrapper big active">
+          <div class="spinner-layer spinner-blue-only">
+            <div class="circle-clipper left">
+              <div class="circle"></div>
+            </div>
+            <div class="gap-patch">
+              <div class="circle"></div>
+            </div>
+            <div class="circle-clipper right">
+              <div class="circle"></div>
+            </div>
           </div>
-          <input type="text" class="datepicker">
-        </div>
-
-      </div>
-
-      <div class="col s12 m9">
-        <div id="contFilms" class="row">
         </div>
       </div>
+      <div class="col s12 m3"></div>
+      <div class="col s12 m9"></div>
 
     </div>
   </div>
@@ -106,38 +109,8 @@
     </div>
   </div>
 
-  <div class="container">
-    <div class="row">
-
-      <!-- Modal Structure -->
-      <div id="modalFilm" class="modal modal-fixed-footer">
-        <div class="modal-content">
-          <h4 id="mTitulo"></h4>
-          <div id="mFlotante">
-            <img id="mImg" src="recursos/caratulas/300.jpg">
-            <p id="mTitulo2"></p>
-            <p id="mAnio"></p>
-            <p id="mDuracion"></p>
-            <p id="mPais"></p>
-            <p id="mGenero"></p>
-            <p id="mSinopsis"></p>
-          </div>
-          <div id="mBlock">
-            <div id="mHoras"></div>
-          </div>
-        </div>
-        <div class="modal-footer">
-          <!-- <a class="waves-effect waves-light btn modal-close">Cerrar</a> -->
-          <a class="modal-action modal-close waves-effect waves-red btn-flat">Cerrar</a>
-          <a id="mAceptar" href="./seating.html" class="waves-effect waves-green btn-flat ">Aceptar</a>
-        </div>
-      </div>
-
-    </div>
-  </div>
-
   <script src="js/utiles.js"></script>
-  <script src="js/load.js"></script>
+  <script src="js/seat.js"></script>
 </body>
 
 </html>

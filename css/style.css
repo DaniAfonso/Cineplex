@@ -20,3 +20,27 @@
 .horaSelect {
     background-color: #00bfa5;
 }
+
+#mImg {
+    float: left;
+    margin-right: 15px;
+    margin-bottom: 15px;
+}
+
+.cardHover{
+    transform: rotate(1deg);
+}
+
+
+/**********************/
+
+.prelo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 600px;
+}
+
+.none {
+    display: none;
+}
