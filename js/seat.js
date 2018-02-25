@@ -46,10 +46,16 @@ function inicializar() {
         anteriorY = trasladoY;
     });
 
-    $(document.body).on("mousemove", function(e) {
+    $(document.body).on("mousemove", function (e) {
         move(e);
     });
-    
+    $('.butaca').on("mousedown", function (e) {
+        asientoClicado = $('.translate').attr('transform');
+    });
+    $('.butaca').on("mouseup", function (e) {
+        if (asientoClicado == $('.translate').attr('transform'))
+            seleccionar($(this))
+    });
 }
 
 function generarAsientos() {
@@ -116,7 +122,7 @@ function mostrarOcupados(c, u, r, row, col) {
     r == "ocupado" ? use.setAttribute("class", "butaca ocupado") : use.setAttribute("class", "butaca noSelected");
     $(use).on({
         click: function () {
-            seleccionar(this);
+            //seleccionar(this);
         }
     });
 
@@ -129,8 +135,10 @@ function seleccionar(e) {
             $(e).removeClass("selected");
             $(e).addClass("noSelected");
         } else {
-            $(e).addClass("selected");
-            $(e).removeClass("noSelected");
+            if ($('.selected').length + 1 <= cantEnt) {
+                $(e).addClass("selected");
+                $(e).removeClass("noSelected");
+            }
         }
     }
 }
@@ -180,6 +188,7 @@ function irPago() {
 
 function mas() {
     scale += 0.2;
+    scale = Math.round((scale * 100)) / 100;
     if (scale < 2)
         $('.scale').attr("transform", "scale(" + scale + ")");
     else
@@ -188,6 +197,7 @@ function mas() {
 
 function menos() {
     scale -= 0.1;
+    scale = Math.round((scale * 100)) / 100;
     if (scale > 1)
         $('.scale').attr("transform", "scale(" + scale + ")");
     else
@@ -211,12 +221,3 @@ function move(e) {
         }
     }
 }
-
-$('.asiento').on("mousedown", function(e){
-    asientoClicado = $('.traslada').attr('transform');
-})
-
-$('.asiento').on("mouseup", function(e){
-    if (asientoClicado ==  $('.traslada').attr('transform'))
-        clickAsiento($(this))
-})
