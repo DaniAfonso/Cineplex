@@ -126,7 +126,7 @@
 
       <div id="svgCont" class="col s12">
         <svg class="none" id="contenedorSvg" width="800px" height="auto" viewBox="-0 -0 800 800">
-          <symbol id="taza" viewBox="0 0 1600 1600">
+          <symbol id="butaca" viewBox="0 0 1600 1600">
             <rect stroke="#000" id="svg_24" height="141.907034" width="136.441988" y="27.479524" x="31.737631" stroke-opacity="null"
               stroke-width="6" />
             <rect stroke="#000" rx="10" id="svg_25" height="170" width="48.72928" y="3.767984" x="147.77078" stroke-opacity="null" stroke-width="6"
@@ -136,7 +136,7 @@
             <rect stroke="#000" rx="10" id="svg_27" height="62.932672" width="139.690607" y="133.367335" x="30.154758" stroke-opacity="null"
               stroke-width="6" />
           </symbol>
-          <symbol id="pantalla" viewBox="-100 -25 400 400">
+          <symbol id="pantalla" viewBox="-100 -25 400 400" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
             <text stroke="#000" transform="matrix(1,0,0,0.7844532085066156,0,16.444968195256088) " font-style="normal" font-weight="bold"
               xml:space="preserve" text-anchor="start" font-family="Oswald, sans-serif" font-size="24" id="svg_44" y="10.439871"
               x="51.625056" fill-opacity="null" stroke-opacity="null" stroke-width="0" fill="#000000">Pantalla</text>
@@ -146,42 +146,43 @@
               xml:space="preserve" text-anchor="start" font-family="Oswald, sans-serif" font-size="24" id="svg_47" y="10.758564"
               x="53.875056" fill-opacity="null" stroke-opacity="null" stroke-width="0" fill="#000000">Pantalla</text>
           </symbol>
-          <symbol id="mas" viewBox="-3500 -250 4000 4000">
+          <symbol id="mas" viewBox="-3500 -250 4000 4000" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
             <path d="M208.489,0C93.343,0,0,93.343,0,208.489c0,115.146,93.343,208.489,208.489,208.489s208.49-93.344,208.49-208.489   C416.979,93.343,323.635,0,208.489,0z M329.006,235.1c0,6.299-5.105,11.404-11.404,11.404h-71.099v71.1   c0,6.298-5.106,11.404-11.404,11.404h-53.22c-6.298,0-11.404-5.106-11.404-11.404v-71.1h-71.1c-6.298,0-11.404-5.106-11.404-11.404   v-53.22c0-6.298,5.106-11.404,11.404-11.404h71.1v-71.1c0-6.298,5.105-11.404,11.404-11.404h53.22   c6.298,0,11.404,5.106,11.404,11.404v71.1h71.099c6.299,0,11.404,5.106,11.404,11.404V235.1L329.006,235.1z"
             />
           </symbol>
-          <symbol id="menos" viewBox="-100 -300 4800 4800">
+          <symbol id="menos" viewBox="-100 -300 4800 4800" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
             <path d="M255,0C114.75,0,0,114.75,0,255s114.75,255,255,255s255-114.75,255-255S395.25,0,255,0z M382.5,280.5h-255v-51h255V280.5z    "
             />
           </symbol>
-          <symbol id="libre" viewBox="0 0 1600 1600">
+          <symbol id="libre" viewBox="0 0 1600 1600" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
             <text transform="rotate(-0.0608258, 197.692, 97.9189) matrix(7.15438, 0, 0, 6.99487, -1449.49, -366.814)" xml:space="preserve"
               text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="24" id="svg_1" y="74.778207" x="203.550446"
               stroke-width="0" stroke="#000" fill="#000000">Libre</text>
           </symbol>
-          <symbol id="ocupado" viewBox="0 0 1600 1600">
+          <symbol id="ocupado" viewBox="0 0 1600 1600" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
             <text transform="rotate(-0.0608258, 354.224, 97.9187) matrix(7.15438, 0, 0, 6.99487, -1449.49, -366.814)" xml:space="preserve"
               text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="24" id="svg_1" y="74.778207" x="203.410654"
               stroke-width="0" stroke="#000" fill="#000000">Ocupado</text>
           </symbol>
-          <symbol id="seleccionado" viewBox="0 0 1600 1600">
+          <symbol id="seleccionado" viewBox="0 0 1600 1600" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
             <text style="cursor: move;" transform="rotate(-0.0608258, 518.321, 97.9187) matrix(7.15438, 0, 0, 6.99487, -1449.49, -366.814)"
               xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="24" id="svg_1"
               y="74.778207" x="203" stroke-width="0" stroke="#000" fill="#000000">Seleccionado</text>
           </symbol>
-          <use href="#taza" class="leNoSelected" width="250" height="250" x="50" y="10"/>
-          <use href="#libre" width="250" height="250" x="100" y="10"/>
-          <use href="#taza" class="leSelected" width="250" height="250" x="280" y="10"/>
-          <use href="#seleccionado" width="250" height="250" x="330" y="10"/>
-          <use href="#taza" class="leOcupado" width="250" height="250" x="600" y="10"/>
-          <use href="#ocupado" width="250" height="250" x="650" y="10"/>
-          <use href="#mas" />
-          <use href="#menos" />
+
           <g class="scale" transform="scale(1)" data-role="viewport-scale">
             <g id="cinema" class="translate" transform="translate(0,0)" data-role="viewport-translate">
               <use href="#pantalla" />
             </g>
           </g>
+          <use href="#butaca" class="leNoSelected" width="250" height="250" x="50" y="10" />
+          <use href="#libre" width="250" height="250" x="100" y="10" />
+          <use href="#butaca" class="leSelected" width="250" height="250" x="280" y="10" />
+          <use href="#seleccionado" width="250" height="250" x="330" y="10" />
+          <use href="#butaca" class="leOcupado" width="250" height="250" x="600" y="10" />
+          <use href="#ocupado" width="250" height="250" x="650" y="10" />
+          <use href="#mas" />
+          <use href="#menos" />
         </svg>
       </div>
 

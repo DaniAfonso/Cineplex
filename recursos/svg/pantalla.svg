@@ -1,0 +1,17 @@
+<svg width="200" height="35" xmlns="http://www.w3.org/2000/svg">
+ <!-- Created with Method Draw - http://github.com/duopixel/Method-Draw/ -->
+ <g>
+  <title>background</title>
+  <rect fill="#fff" id="canvas_background" height="37" width="202" y="-1" x="-1"/>
+ </g>
+ <g>
+  <title>Layer 1</title>
+  <g id="svg_29">
+   <g id="svg_48">
+    <text stroke="#000" transform="matrix(1,0,0,0.7844532085066156,0,16.444968195256088) " font-style="normal" font-weight="bold" xml:space="preserve" text-anchor="start" font-family="Oswald, sans-serif" font-size="24" id="svg_44" y="10.439871" x="51.625056" fill-opacity="null" stroke-opacity="null" stroke-width="0" fill="#000000">Pantalla</text>
+    <path stroke="#000" id="svg_45" d="m3.350743,1.880215l36.187452,30.999958l120.624847,0l36.18744,-30.999958l-192.999739,0z" stroke-opacity="null" stroke-width="2" fill="#d1d1d1"/>
+    <text stroke="#000" transform="matrix(1,0,0,0.7844532085066156,0,16.444968195256088) " font-style="normal" font-weight="bold" xml:space="preserve" text-anchor="start" font-family="Oswald, sans-serif" font-size="24" id="svg_47" y="10.758564" x="53.875056" fill-opacity="null" stroke-opacity="null" stroke-width="0" fill="#000000">Pantalla</text>
+   </g>
+  </g>
+ </g>
+</svg>

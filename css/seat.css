@@ -68,14 +68,3 @@ svg text {
   -ms-user-select: none;
   user-select: none;
 }
-
-#mas{
-  z-index: 1;
-}
-#menos {
-  z-index: -1;
-}
-
-#pantalla{
-  z-index: -1;
-}

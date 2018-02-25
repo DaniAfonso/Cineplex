@@ -105,7 +105,7 @@ function mostrarOcupados(c, u, r, row, col) {
     let xlinkns = "http://www.w3.org/1999/xlink";
 
     let use = document.createElementNS(svgns, "use");
-    use.setAttributeNS(xlinkns, "href", "#taza");
+    use.setAttributeNS(xlinkns, "href", "#butaca");
     use.setAttribute("row", row);
     use.setAttribute("col", col);
     use.setAttribute("x", c);
@@ -113,7 +113,7 @@ function mostrarOcupados(c, u, r, row, col) {
     use.setAttribute('width', '200');
     use.setAttribute('height', '200');
     use.setAttribute("estado", r);
-    r == "ocupado" ? use.setAttribute("class", "taza ocupado") : use.setAttribute("class", "taza noSelected");
+    r == "ocupado" ? use.setAttribute("class", "butaca ocupado") : use.setAttribute("class", "butaca noSelected");
     $(use).on({
         click: function () {
             seleccionar(this);
