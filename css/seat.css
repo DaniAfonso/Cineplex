@@ -1,0 +1,81 @@
+#svgCont {
+  display: flex;
+  justify-content: center;
+}
+
+#svgCont>.none {
+  display: none;
+}
+
+#contEntradas {
+  display: flex;
+  flex-flow: column;
+  align-content: center;
+}
+
+#contEntradasBotones {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#contPagar {
+  display: flex;
+  justify-content: center;
+}
+
+.noSelected {
+  fill: rgb(235, 235, 235);
+}
+
+.selected {
+  fill: rgb(92, 221, 88);
+}
+
+.ocupado {
+  fill: rgb(255, 29, 29);
+}
+
+.leNoSelected {
+  fill: rgb(235, 235, 235);
+}
+
+.leSelected {
+  fill: rgb(92, 221, 88);
+}
+
+.leOcupado {
+  fill: rgb(255, 29, 29);
+}
+
+ellipse,
+circle,
+rect {
+  fill: inherit;
+}
+
+#contenedorSvg {
+  background-color: beige;
+}
+
+svg text::selection {
+  background: none;
+}
+
+svg text {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+#mas{
+  z-index: 1;
+}
+#menos {
+  z-index: -1;
+}
+
+#pantalla{
+  z-index: -1;
+}

@@ -1,9 +1,12 @@
-let jsReservas;
-let jsReserva;
+let jsTickets;
+let preTicket;
 let preloader = false;
 
-function cardReturn(titulo, descripcion, img) {
+function toast(m) {
+    Materialize.toast(m, 3000, 'rounded')
+}
 
+function cardReturn(titulo, descripcion, img) {
     let p = '<div class="col s12 m6"> ' +
         '<div class="card z-depth-5"> ' +
         '<div id="cardImg" class="card-image"> ' +
@@ -26,68 +29,58 @@ function hourReturn(id, hora) {
     return b;
 }
 
-function loadReservas() {
-    let local;
-    local = localStorage.getItem("jsReservas");
-    if (local != null) {
-        jsReservas = JSON.parse(local);
+function loadTickets() {
+    let ticketsJson;
+    ticketsJson = localStorage.getItem("jsTickets");
+    if (ticketsJson != null) {
+        jsTickets = JSON.parse(ticketsJson);
         /*
         jsVotantes.forEach(function (value, indice, array) {
             console.log(value);
         })
         */
     } else {
-        jsReservas = [];
+        jsTickets = [];
     }
 }
 
-function loadReserva() {
+function loadPreTicket() {
     let local;
-    local = localStorage.getItem("jsReserva");
+    local = localStorage.getItem("preTicket");
     if (local != null) {
-        jsReservas = JSON.parse(local);
+        preTicket = JSON.parse(local);
     } else {
-        jsReservas = [];
+        preTicket = [];
     }
+}
+
+function loadInfoFilm() {
+    $('#infoImg').attr("src", "recursos/caratulas/" + preTicket.pel.img);
+    $('#infoTitulo').text('Título: ' + preTicket.pel.titulo);
+    $('#infoDuracion').text('Duración: ' + preTicket.pel.duracion + " min");
+    $('#infoFecha').text('Fecha: ' + preTicket.fecha);
+    $('#infoHora').text('Hora: ' + preTicket.hora);
+    $('#infoPrecio').text('Precio: ' + preTicket.precio + "€");
+    $('#infoCantidad').text('Cantidad: ' + preTicket.cantidad);
 }
 
 function saveReservas() {
-    let nombre = $("#inputName").val();
-    let email = $("#inputEmail").val();
-    let telefono = $("#inputTelefono").val();
-    let index = $("#md-body-info").attr("ident");
-
-    jsReservas.push({
-        nombre: nombre,
-        email: email,
-        telefono: telefono,
-        voto: index
-    })
-    localStorage.setItem("jsReservas", JSON.stringify(jsReservas));
-}
-
-function saveReserva() {
-    let nombre = $("#inputName").val();
-    let email = $("#inputEmail").val();
-    let telefono = $("#inputTelefono").val();
-    let index = $("#md-body-info").attr("ident");
-
-    jsReserva.push({
-        nombre: nombre,
-        email: email,
-        telefono: telefono,
-        voto: index
-    })
-    localStorage.setItem("jsReserva", JSON.stringify(jsReserva));
+    jsTickets.push(preTicket);
+    localStorage.setItem("jsTickets", JSON.stringify(jsTickets));
 }
 
 function preloaderToggle() {
     setTimeout(function () {
-            classToggle(".prelo", "none")
+            classToggle(".prelo", "none");
+            classToggle("#noneCard", "none");
+            classToggle("#contenedorSvg", "none");
+            classToggle("#noneEntradas", "none");
+            classToggle("#noneBtnEntradas", "none");
+            classToggle("#noneBtnPagar", "none");
         },
         3000);
 }
 
-function classToggle(a, b){
+function classToggle(a, b) {
     $(a).toggleClass(b);
 }

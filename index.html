@@ -112,30 +112,36 @@
       <!-- Modal Structure -->
       <div id="modalFilm" class="modal modal-fixed-footer">
         <div class="modal-content">
-          <h4 id="mTitulo"></h4>
+          <h4 ident="" id="mTitulo"></h4>
+          <input type="date" />
           <div id="mFlotante">
-            <img id="mImg" src="recursos/caratulas/300.jpg">
+            <img id="mImg" src="">
             <p id="mTitulo2"></p>
             <p id="mAnio"></p>
             <p id="mDuracion"></p>
             <p id="mPais"></p>
             <p id="mGenero"></p>
+            <p id="mPrecio"></p>
             <p id="mSinopsis"></p>
           </div>
           <div id="mBlock">
-            <div id="mHoras"></div>
+            <fieldset>
+              <legend>Horario disponible:</legend>
+              <div id="mHoras"></div>
+            </fieldset>
           </div>
         </div>
         <div class="modal-footer">
           <!-- <a class="waves-effect waves-light btn modal-close">Cerrar</a> -->
           <a class="modal-action modal-close waves-effect waves-red btn-flat">Cerrar</a>
-          <a id="mAceptar" href="./seating.html" class="waves-effect waves-green btn-flat ">Aceptar</a>
+          <a id="mAceptar" class="waves-effect waves-green btn-flat">Aceptar</a>
         </div>
       </div>
 
     </div>
   </div>
 
+  <script src="js/objs/objs.js"></script>
   <script src="js/utiles.js"></script>
   <script src="js/load.js"></script>
 </body>

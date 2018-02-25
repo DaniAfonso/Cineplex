@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
+    <link type="text/css" rel="stylesheet" href="css/style.css" />
+    <script src="lib/jquery-3.3.1.min.js"></script>
+    <script src="lib/materialize.min.js"></script>
+    <script src="json/infoFilms.js"></script>
+    <title>Cineplex</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <nav class="col s12 nav-extended">
+                <div class="nav-wrapper">
+                    <a href="./index.html" class="brand-logo">
+                        <img height="65px" src="recursos/logos/imax-logo.svg" alt="Logo">
+                    </a>
+                    <ul id="nav-mobile" class="right hide-on-med-and-down">
+                        <li>
+                            <a href="sass.html">Sass</a>
+                        </li>
+                        <li>
+                            <a href="badges.html">Components</a>
+                        </li>
+                        <li>
+                            <a href="collapsible.html">JavaScript</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="nav-wrapper">
+                    <div class="col s12">
+                        <a href="./index.html" class="breadcrumb">Película</a>
+                        <a href="./seating.html" class="breadcrumb">Asientos</a>
+                        <a href="./pay.html" class="breadcrumb">Pago</a>
+                        <a href="./confirm.html" class="breadcrumb">Confirmación</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col s12 m6">
+                <div class="card horizontal">
+                    <div class="card-image">
+                        <img id="infoImg" src="">
+                    </div>
+                    <div class="card-stacked">
+                        <div id="infoFlotante" class="card-content">
+                            <p id="infoTitulo"></p>
+                            <p id="infoDuracion"></p>
+                            <p id="infoFecha"></p>
+                            <p id="infoHora"></p>
+                            <p id="infoPrecio"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="contEntradas" class="col s12 m6">
+                <ul class="collection">
+                    <li class="collection-item avatar">
+                        <i class="material-icons circle red">assignment</i>
+                        <span class="title">Entradas: </span>
+                        <div class="dividir">
+                            <p>Cantidad:</p>
+                            <p id="cantEnt">1</p>
+                        </div>
+                        <div class="dividir">
+                            <p>Subtotal:</p>
+                            <p id="totalEnt">7€</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="row">
+
+            </div>
+
+            <div class="col s12">
+                <h2 class="promo-caption">Confirmación</h2>
+                <h5>Se ha completado la compra correctamente, puede descargar un 
+                    fichero pdf con toda la información de la reserva desde el siguiente botón.</h5>
+            </div>
+            <div id="contDescargar" class="input-field col s12">
+                <a id="cntDescargar" class="waves-effect waves-light btn-large">
+                    <i class="material-icons left">cloud_download</i>Descargar</a>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <footer class="page-footer">
+                <div class="container">
+                    <div class="row">
+                        <div class="col l6 s12">
+                            <h5 class="white-text">Footer Content</h5>
+                            <p class="grey-text text-lighten-4">Yntent.</p>
+                        </div>
+                        <div class="col l4 offset-l2 s12">
+                            <h5 class="white-text">Links</h5>
+                            <ul>
+                                <li>
+                                    <a class="grey-text text-lighten-3" href="#!">Link 1</a>
+                                </li>
+                                <li>
+                                    <a class="grey-text text-lighten-3" href="#!">Link 2</a>
+                                </li>
+                                <li>
+                                    <a class="grey-text text-lighten-3" href="#!">Link 3</a>
+                                </li>
+                                <li>
+                                    <a class="grey-text text-lighten-3" href="#!">Link 4</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-copyright">
+                    <div class="container">
+                        © 2018 Daniel Afonso Copyright
+                        <a class="grey-text text-lighten-4 right" href="https://creativecommons.org/licenses/by/4.0/">
+                            <img height="25px" src="recursos/logos/creative.svg" alt="Logo">
+                        </a>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <script src="js/objs/objs.js"></script>
+    <script src="js/utiles.js"></script>
+    <script src="js/confirm.js"></script>
+</body>
+
+</html>

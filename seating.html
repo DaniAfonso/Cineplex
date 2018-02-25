@@ -8,6 +8,7 @@
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
   <link type="text/css" rel="stylesheet" href="css/style.css" />
+  <link type="text/css" rel="stylesheet" href="css/seat.css" />
   <script src="lib/jquery-3.3.1.min.js"></script>
   <script src="lib/materialize.min.js"></script>
   <script src="json/infoFilms.js"></script>
@@ -38,7 +39,7 @@
         <div class="nav-wrapper">
           <div class="col s12">
             <a href="./index.html" class="breadcrumb">Película</a>
-            <a href="./asientos.html" class="breadcrumb">Asientos</a>
+            <a href="./seating.html" class="breadcrumb">Asientos</a>
           </div>
         </div>
       </nav>
@@ -63,8 +64,126 @@
           </div>
         </div>
       </div>
-      <div class="col s12 m3"></div>
-      <div class="col s12 m9"></div>
+
+      <div id="contInfo" class="col s12 m6">
+
+        <div id="noneCard" class="col s12 none">
+          <div class="card horizontal ">
+            <div class="card-image">
+              <img id="infoImg" src="">
+            </div>
+            <div class="card-stacked">
+              <div id="infoFlotante" class="card-content">
+                <p id="infoTitulo"></p>
+                <p id="infoDuracion"></p>
+                <p id="infoFecha"></p>
+                <p id="infoHora"></p>
+                <p id="infoPrecio"></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="contEntradas" class="col s12 m6">
+        <ul id="noneEntradas" class="collection none">
+          <li class="collection-item avatar">
+            <i class="material-icons circle red">attach_money</i>
+            <span class="title">Entradas: </span>
+            <div class="dividir">
+              <p>Cantidad:</p>
+              <p id="cantEnt">1</p>
+            </div>
+            <div class="dividir">
+              <p>Subtotal:</p>
+              <p id="totalEnt">7€</p>
+            </div>
+          </li>
+        </ul>
+        <ul id="noneBtnEntradas" class="collection none">
+          <li class="collection-item">
+            <div id="contEntradasBotones">
+              <a id="btnRes" class="btn-floating btn waves-effect waves-light red">
+                <i class="material-icons">remove</i>
+              </a>
+              <a id="btnResult" class="btn-floating btn-large waves-effect waves-light blue">
+                <i id="btnResultCant">1</i>
+              </a>
+              <a id="btnSum" class="btn-floating btn waves-effect waves-light red">
+                <i class="material-icons">add</i>
+              </a>
+            </div>
+          </li>
+        </ul>
+        <ul id="noneBtnPagar" class="collection none">
+          <li id="contPagar" class="collection-item">
+            <button id="btnIrPago" class="btn waves-effect waves-light" name="action">Pagar
+              <i class="material-icons left">payment</i>
+            </button>
+          </li>
+        </ul>
+      </div>
+
+      <div id="svgCont" class="col s12">
+        <svg class="none" id="contenedorSvg" width="800px" height="auto" viewBox="-0 -0 800 800">
+          <symbol id="taza" viewBox="0 0 1600 1600">
+            <rect stroke="#000" id="svg_24" height="141.907034" width="136.441988" y="27.479524" x="31.737631" stroke-opacity="null"
+              stroke-width="6" />
+            <rect stroke="#000" rx="10" id="svg_25" height="170" width="48.72928" y="3.767984" x="147.77078" stroke-opacity="null" stroke-width="6"
+            />
+            <rect stroke="#000" rx="10" id="svg_26" height="170.28844" width="48.729281" y="3.800041" x="3.500063" stroke-opacity="null"
+              stroke-width="6" />
+            <rect stroke="#000" rx="10" id="svg_27" height="62.932672" width="139.690607" y="133.367335" x="30.154758" stroke-opacity="null"
+              stroke-width="6" />
+          </symbol>
+          <symbol id="pantalla" viewBox="-100 -25 400 400">
+            <text stroke="#000" transform="matrix(1,0,0,0.7844532085066156,0,16.444968195256088) " font-style="normal" font-weight="bold"
+              xml:space="preserve" text-anchor="start" font-family="Oswald, sans-serif" font-size="24" id="svg_44" y="10.439871"
+              x="51.625056" fill-opacity="null" stroke-opacity="null" stroke-width="0" fill="#000000">Pantalla</text>
+            <path stroke="#000" id="svg_45" d="m3.350743,1.880215l36.187452,30.999958l120.624847,0l36.18744,-30.999958l-192.999739,0z"
+              stroke-opacity="null" stroke-width="2" fill="#d1d1d1" />
+            <text stroke="#000" transform="matrix(1,0,0,0.7844532085066156,0,16.444968195256088) " font-style="normal" font-weight="bold"
+              xml:space="preserve" text-anchor="start" font-family="Oswald, sans-serif" font-size="24" id="svg_47" y="10.758564"
+              x="53.875056" fill-opacity="null" stroke-opacity="null" stroke-width="0" fill="#000000">Pantalla</text>
+          </symbol>
+          <symbol id="mas" viewBox="-3500 -250 4000 4000">
+            <path d="M208.489,0C93.343,0,0,93.343,0,208.489c0,115.146,93.343,208.489,208.489,208.489s208.49-93.344,208.49-208.489   C416.979,93.343,323.635,0,208.489,0z M329.006,235.1c0,6.299-5.105,11.404-11.404,11.404h-71.099v71.1   c0,6.298-5.106,11.404-11.404,11.404h-53.22c-6.298,0-11.404-5.106-11.404-11.404v-71.1h-71.1c-6.298,0-11.404-5.106-11.404-11.404   v-53.22c0-6.298,5.106-11.404,11.404-11.404h71.1v-71.1c0-6.298,5.105-11.404,11.404-11.404h53.22   c6.298,0,11.404,5.106,11.404,11.404v71.1h71.099c6.299,0,11.404,5.106,11.404,11.404V235.1L329.006,235.1z"
+            />
+          </symbol>
+          <symbol id="menos" viewBox="-100 -300 4800 4800">
+            <path d="M255,0C114.75,0,0,114.75,0,255s114.75,255,255,255s255-114.75,255-255S395.25,0,255,0z M382.5,280.5h-255v-51h255V280.5z    "
+            />
+          </symbol>
+          <symbol id="libre" viewBox="0 0 1600 1600">
+            <text transform="rotate(-0.0608258, 197.692, 97.9189) matrix(7.15438, 0, 0, 6.99487, -1449.49, -366.814)" xml:space="preserve"
+              text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="24" id="svg_1" y="74.778207" x="203.550446"
+              stroke-width="0" stroke="#000" fill="#000000">Libre</text>
+          </symbol>
+          <symbol id="ocupado" viewBox="0 0 1600 1600">
+            <text transform="rotate(-0.0608258, 354.224, 97.9187) matrix(7.15438, 0, 0, 6.99487, -1449.49, -366.814)" xml:space="preserve"
+              text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="24" id="svg_1" y="74.778207" x="203.410654"
+              stroke-width="0" stroke="#000" fill="#000000">Ocupado</text>
+          </symbol>
+          <symbol id="seleccionado" viewBox="0 0 1600 1600">
+            <text style="cursor: move;" transform="rotate(-0.0608258, 518.321, 97.9187) matrix(7.15438, 0, 0, 6.99487, -1449.49, -366.814)"
+              xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="24" id="svg_1"
+              y="74.778207" x="203" stroke-width="0" stroke="#000" fill="#000000">Seleccionado</text>
+          </symbol>
+          <use href="#taza" class="leNoSelected" width="250" height="250" x="50" y="10"/>
+          <use href="#libre" width="250" height="250" x="100" y="10"/>
+          <use href="#taza" class="leSelected" width="250" height="250" x="280" y="10"/>
+          <use href="#seleccionado" width="250" height="250" x="330" y="10"/>
+          <use href="#taza" class="leOcupado" width="250" height="250" x="600" y="10"/>
+          <use href="#ocupado" width="250" height="250" x="650" y="10"/>
+          <use href="#mas" />
+          <use href="#menos" />
+          <g class="scale" transform="scale(1)" data-role="viewport-scale">
+            <g id="cinema" class="translate" transform="translate(0,0)" data-role="viewport-translate">
+              <use href="#pantalla" />
+            </g>
+          </g>
+        </svg>
+      </div>
 
     </div>
   </div>
@@ -109,6 +228,7 @@
     </div>
   </div>
 
+  <script src="js/objs/objs.js"></script>
   <script src="js/utiles.js"></script>
   <script src="js/seat.js"></script>
 </body>

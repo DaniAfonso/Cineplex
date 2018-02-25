@@ -17,8 +17,8 @@
     margin: 10px;
 }
 
-.horaSelect {
-    background-color: #00bfa5;
+#modalFilm .horaSelect {
+    background-color: #b66ea4 !important;
 }
 
 #mImg {
@@ -27,14 +27,13 @@
     margin-bottom: 15px;
 }
 
-.cardHover{
+.cardHover {
     transform: rotate(1deg);
 }
 
-
 /**********************/
 
-.prelo{
+.prelo {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -43,4 +42,20 @@
 
 .none {
     display: none;
+}
+
+#infoFlotante {
+    display: flex;
+    flex-flow: column;
+    justify-content: space-around;
+}
+
+.dividir {
+    display: flex;
+    justify-content: space-between;
+}
+
+#contDescargar{
+    display: flex;
+    justify-content: center;
 }
