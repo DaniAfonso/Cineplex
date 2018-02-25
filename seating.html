@@ -125,7 +125,8 @@
       </div>
 
       <div id="svgCont" class="col s12">
-        <svg class="none" id="contenedorSvg" width="800px" height="auto" viewBox="-0 -0 800 800" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <svg class="none" id="contenedorSvg" width="800px" height="auto" viewBox="-0 -0 800 800" xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink">
           <symbol id="butaca" viewBox="0 0 1600 1600">
             <rect stroke="#000" id="svg_24" height="141.907034" width="136.441988" y="27.479524" x="31.737631" stroke-opacity="null"
               stroke-width="6" />
@@ -136,7 +137,7 @@
             <rect stroke="#000" rx="10" id="svg_27" height="62.932672" width="139.690607" y="133.367335" x="30.154758" stroke-opacity="null"
               stroke-width="6" />
           </symbol>
-          <symbol id="pantalla" viewBox="-100 -25 400 400" >
+          <symbol id="pantalla" viewBox="-100 -25 400 400">
             <text stroke="#000" transform="matrix(1,0,0,0.7844532085066156,0,16.444968195256088) " font-style="normal" font-weight="bold"
               xml:space="preserve" text-anchor="start" font-family="Oswald, sans-serif" font-size="24" id="svg_44" y="10.439871"
               x="51.625056" fill-opacity="null" stroke-opacity="null" stroke-width="0" fill="#000000">Pantalla</text>
@@ -169,12 +170,6 @@
               xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="24" id="svg_1"
               y="74.778207" x="203" stroke-width="0" stroke="#000" fill="#000000">Seleccionado</text>
           </symbol>
-
-          <g class="scale" transform="scale(1)" data-role="viewport-scale">
-            <g id="cinema" class="translate" transform="translate(0,0)" data-role="viewport-translate">
-              <use href="#pantalla" />
-            </g>
-          </g>
           <use href="#butaca" class="leNoSelected" width="250" height="250" x="50" y="10" />
           <use href="#libre" width="250" height="250" x="100" y="10" />
           <use href="#butaca" class="leSelected" width="250" height="250" x="280" y="10" />
@@ -183,6 +178,12 @@
           <use href="#ocupado" width="250" height="250" x="650" y="10" />
           <use href="#mas" />
           <use href="#menos" />
+          <g class="scale" transform="scale(1)" data-role="viewport-scale">
+            <g id="cinema" class="translate" transform="translate(0,0)" data-role="viewport-translate">
+              <use href="#pantalla" />
+            </g>
+          </g>
+
         </svg>
       </div>
 
