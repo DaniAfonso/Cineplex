@@ -28,13 +28,13 @@ function inicializar() {
     $('#btnIrPago').click(function () {
         irPago();
     });
-    $('#mas').click(function () {
+    $('#btnMZoom').click(function () {
         mas();
     });
-    $('#menos').click(function () {
+    $('#btnLZoom').click(function () {
         menos();
     });
-    $(document.body).on("mousedown", function (e) {
+    $('#contenedorSvg').on("mousedown", function (e) {
         $dragging = $(e.target);
         trasX = e.pageX;
         trasY = e.pageY;
@@ -163,6 +163,7 @@ function guardarCambios() {
 function changeTotal(a) {
     cantEnt += (a);
     cantEnt = cantEnt < 1 ? 1 : cantEnt;
+    cantEnt = cantEnt > 10 ? 10 : cantEnt;
     $('#cantEnt')[0].textContent = cantEnt;
     $('#totalEnt')[0].textContent = cantEnt * preTicket.precio + "€";
     $('#btnResultCant')[0].textContent = cantEnt;
@@ -170,7 +171,7 @@ function changeTotal(a) {
 
 function irPago() {
     let sel = $('.selected');
-    if ($(sel).length == cantEnt) {
+    if ($(sel).length == cantEnt && cantEnt <= 10) {
         $(sel).each(function (i, e) {
             let s = new seating();
             s.row = $(e).attr("row");
