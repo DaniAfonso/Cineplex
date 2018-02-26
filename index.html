@@ -45,7 +45,7 @@
 
   <div class="container">
     <div class="row">
-
+      <!--
       <div class="col s12 m3">
 
         <div id="dateP">
@@ -57,8 +57,8 @@
         </div>
 
       </div>
-
-      <div class="col s12 m9">
+    -->
+      <div class="col s12">
         <div id="contFilms" class="row">
         </div>
       </div>
@@ -113,7 +113,6 @@
       <div id="modalFilm" class="modal modal-fixed-footer">
         <div class="modal-content">
           <h4 ident="" id="mTitulo"></h4>
-          <input type="date" />
           <div id="mFlotante">
             <img id="mImg" src="">
             <p id="mTitulo2"></p>
@@ -126,6 +125,13 @@
           </div>
           <div id="mBlock">
             <fieldset>
+              <div id="dateP">
+                <div id="dateIcon">
+                  <i class="small material-icons">date_range</i>
+                  <p>Fecha:</p>
+                </div>
+                <input type="text" class="datepicker">
+              </div>
               <legend>Horario disponible:</legend>
               <div id="mHoras"></div>
             </fieldset>

@@ -7,7 +7,7 @@ function toast(m) {
 }
 
 function cardReturn(titulo, descripcion, img) {
-    let p = '<div class="col s12 m6"> ' +
+    let p = '<div class="col s12 m6 l4"> ' +
         '<div class="card z-depth-5"> ' +
         '<div id="cardImg" class="card-image"> ' +
         '<img src=' + "recursos/caratulas/" + img + '> ' +

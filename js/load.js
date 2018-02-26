@@ -57,8 +57,7 @@ function openModal(id) {
             $(this).toggleClass("horaSelect");
         }
     });
-    if (existeFecha())
-        $('.modal').modal('open');
+    $('.modal').modal('open');
 }
 
 function hoverCard(e, c) {
@@ -69,29 +68,16 @@ function unhoverCard(e, c) {
     e.classList.remove(c);
 }
 
-function existeFecha() {
-    let existe = false;
-    let date = $(".datepicker").val();
-    if (date.length) {
-        console.log(date);
-        existe = true;
-        dia = date;
-    } else {
-        toast("No has elegido un día válido.");
-    }
-    return existe;
-}
-
 function calPrecio() {
     let precioEntrada = 3;
     if (dia.length)
         precioEntrada = 7;
     else
-        precioEntrada = 5.43;
+        precioEntrada = 7;
     return precioEntrada;
 }
 
-function recuperarPelicula(i){
+function recuperarPelicula(i) {
     let pel = new pelicula();
     pel.titulo = infoFilms[i].titulo;
     pel.anio = infoFilms[i].anio;
@@ -104,18 +90,33 @@ function recuperarPelicula(i){
     return pel;
 }
 
-function saveData() {
-    let horaElegida = $(".horaSelect");
-    if (horaElegida.length == 1) {
-        let preTick = new ticket();
-        preTick.fecha = dia;
-        preTick.hora = $(horaElegida)[0].text;
-        preTick.precio = calPrecio();
-        preTick.cantidad = 1;
-        preTick.pel = recuperarPelicula($('#mTitulo').attr("ident"));
-        localStorage.setItem("preTicket", JSON.stringify(preTick));
-        window.location = "./seating.html";
+function existeFecha() {
+    let existe = false;
+    let date = $(".datepicker").val();
+    if (date.length) {
+        console.log(date);
+        existe = true;
+        dia = date;
     } else {
-        toast("No has elegido una hora válida.")
+        toast("No has elegido una fecha válida.");
+    }
+    return existe;
+}
+
+function saveData() {
+    if (existeFecha()) {
+        let horaElegida = $(".horaSelect");
+        if (horaElegida.length == 1) {
+            let preTick = new ticket();
+            preTick.fecha = dia;
+            preTick.hora = $(horaElegida)[0].text;
+            preTick.precio = calPrecio();
+            preTick.cantidad = 1;
+            preTick.pel = recuperarPelicula($('#mTitulo').attr("ident"));
+            localStorage.setItem("preTicket", JSON.stringify(preTick));
+            window.location = "./seating.html";
+        } else {
+            toast("No has elegido una hora válida.");
+        }
     }
 }
