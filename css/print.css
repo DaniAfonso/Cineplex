@@ -1,0 +1,10 @@
+.nav-extended,
+.page-footer,
+#cntDescargar,
+#msjDisplay {
+    display: none;
+}
+
+#msjPrint {
+    display: initial;
+}

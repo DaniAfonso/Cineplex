@@ -8,6 +8,11 @@ function inicializar() {
     loadTickets();
     pre = jsTickets[jsTickets.length - 1];
     loadInfoFilm();
+
+    $('#cntDescargar').click(function () {
+        window.print();
+    });
+    
 }
 
 function loadInfoFilm() {

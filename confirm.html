@@ -8,6 +8,7 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
     <link type="text/css" rel="stylesheet" href="css/style.css" />
+    <link type="text/css" rel="stylesheet" href="css/print.css" media="print">
     <script src="lib/jquery-3.3.1.min.js"></script>
     <script src="lib/materialize.min.js"></script>
     <script src="json/infoFilms.js"></script>
@@ -15,6 +16,11 @@
 </head>
 
 <body>
+
+    <div id="msjPrint" class="col s12">
+        <h2 class="promo-caption">Confirmación</h2>
+        <h5>Debes presentar este documento en la entrada, no olvide su DNI.</h5>
+    </div>
 
     <div class="row">
         <nav class="col s12 nav-extended">
@@ -80,7 +86,7 @@
 
             </div>
 
-            <div class="col s12">
+            <div id="msjDisplay" class="col s12">
                 <h2 class="promo-caption">Confirmación</h2>
                 <h5>Se ha completado la compra correctamente, puede descargar un fichero pdf con toda la información de la reserva
                     desde el siguiente botón.</h5>
