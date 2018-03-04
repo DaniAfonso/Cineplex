@@ -1,13 +1,5 @@
 let asientos = [];
 let cantEnt = 1;
-let $dragging = null;
-let scale = 1;
-var trasX = 0;
-var trasY = 0;
-var trasladoX = 0;
-var trasladoY = 0;
-var anteriorX = 0;
-var anteriorY = 0;
 
 $(document).ready(function () {
     preloaderToggle();
@@ -28,41 +20,14 @@ function inicializar() {
     $('#btnIrPago').click(function () {
         irPago();
     });
-    $('#btnMZoom').click(function () {
-        mas();
-    });
-    $('#btnLZoom').click(function () {
-        menos();
-    });
-    $('#contenedorSvg').on("mousedown", function (e) {
-        $dragging = $(e.target);
-        trasX = e.pageX;
-        trasY = e.pageY;
-    });
-
-    $(document.body).on("mouseup", function (e) {
-        $dragging = null;
-        anteriorX = trasladoX;
-        anteriorY = trasladoY;
-    });
-
-    $(document.body).on("mousemove", function (e) {
-        move(e);
-    });
-    $('.butaca').on("mousedown", function (e) {
-        asientoClicado = $('.translate').attr('transform');
-    });
-    $('.butaca').on("mouseup", function (e) {
-        if (asientoClicado == $('.translate').attr('transform'))
-            seleccionar($(this))
-    });
+    initMove();
 }
 
 function generarAsientos() {
     asientos = [];
     let estado = "libre"
-    for (let c = 0, x = 100; c < 20; c++, x += 30) {
-        for (let f = 0, y = 200; f < 12; f++, y += 50) {
+    for (let c = 0, x = 100; c < 20; c++ , x += 30) {
+        for (let f = 0, y = 200; f < 12; f++ , y += 50) {
             //Math.round(Math.random() * 2) % 2 == 0 ? estado = "ocupado" : estado = "libre";
             if (c == 4 || c == 5 || c == 15 || c == 14) {
                 //console.log("Fila pasillo");
@@ -184,41 +149,5 @@ function irPago() {
         console.log(preTicket);
     } else {
         toast("No has seleccionado esa cantidad de entradas.");
-    }
-}
-
-function mas() {
-    scale += 0.2;
-    scale = Math.round((scale * 100)) / 100;
-    if (scale < 2)
-        $('.scale').attr("transform", "scale(" + scale + ")");
-    else
-        scale = 2;
-}
-
-function menos() {
-    scale -= 0.1;
-    scale = Math.round((scale * 100)) / 100;
-    if (scale > 1)
-        $('.scale').attr("transform", "scale(" + scale + ")");
-    else
-        scale = 1;
-}
-
-function move(e) {
-    if ($dragging) {
-        if (scale > 1) {
-            trasladoX = ((e.pageX - trasX) / scale) + anteriorX;
-            if (trasladoX < -300)
-                trasladoX = -300;
-            if (trasladoX > -95)
-                trasladoX = -95;
-            trasladoY = ((e.pageY - trasY) / scale) + anteriorY;
-            if (trasladoY < -500)
-                trasladoY = -500;
-            if (trasladoY > 60)
-                trasladoY = 60;
-            $('.translate').attr('transform', 'translate(' + trasladoX + ',' + trasladoY + ')');
-        }
     }
 }

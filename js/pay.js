@@ -7,7 +7,7 @@ $(document).ready(function () {
 function addEntradas() {
     preTicket.asientos.forEach(function (e, i) {
         let div = '<div class="dividir">' +
-            '<p>Fila: ' + e.row + ', Columna: ' + e.col + '</p>' +
+            '<p>Fila: ' + e.row + ', Asiento: ' + e.col + '</p>' +
             '<p id="precEnt">' + preTicket.precio + '€</p>' +
             '</div>';
         $("#contEntradas .title").after(div);
